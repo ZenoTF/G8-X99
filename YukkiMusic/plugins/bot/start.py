@@ -288,3 +288,14 @@ async def welcome(client, message: Message):
             return
         except:
             return
+          
+@app.on_message(command("start") & filters.private & ~filters.edited)
+async def start_(client: Client, message: Message):
+       await message.reply_photo(
+        photo=f"{START_IMG}",
+        caption=f"""**Hello {message.from_user.mention()}
+
+I'm Daze, Advanced bot to stream music on video chats!**""",
+         reply_markup=InlineKeyboardMarkup(out),
+         )
+             
