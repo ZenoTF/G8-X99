@@ -296,6 +296,7 @@ async def start_(client: Client, message: Message):
         caption=f"""**Hello {message.from_user.mention()}
 
 I'm Daze, Advanced bot to stream music on video chats!**""",
-         reply_markup=InlineKeyboardMarkup(out),
+         xxx = private_panel(_, app.username, OWNER)
+         reply_markup=InlineKeyboardMarkup(xxx),
          )
              
